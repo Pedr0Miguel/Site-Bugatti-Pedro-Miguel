@@ -1,0 +1,118 @@
+/* Buscando a fonte nos arquivos */
+
+@font-face {
+    font-family: 'Noto Sans';
+    src: url('/fonte/lucida-console/lucon.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+}
+
+/* Inserindo em tudo a fonte */
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Config da nav */
+
+nav {
+    background-color: #000000;
+    list-style-type: none;
+    overflow: hidden;
+    position: fixed;
+    width: 100%;
+}
+
+/* Config faz o logo estar a esquerda */
+
+nav ul li.esquerda {
+    float: left;
+    margin-left: 15px;
+}
+
+nav ul li {
+    float: right;
+    margin-left: 15px;
+}
+
+li a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+    font-size: 20px;
+    padding: 12px;
+}
+
+h3 {
+    padding-top: 100px;
+    font-size: 40px;
+    text-align: center;
+}
+
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+article {
+
+    text-align: center;
+    flex: 1 1 300px;
+    /* Define a largura mínima e máxima das colunas */
+    max-height: 300px;
+    width: 250px;
+    max-width: 600px;
+    padding-top: 50px;
+    margin: 10px 10px 0px 10px;
+
+}
+
+article img {
+    height: auto;
+    margin-top: 20px;
+    width: 100%;
+}
+
+img {
+    float: left;
+    height: auto;
+    max-width: 100%;
+}
+
+@media (max-width: 700px) {
+
+    nav ul li.esquerda {
+        font-size: 50px;
+    }
+
+    nav ul li.direita {
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-size: 32px;
+        gap: 3px;
+
+    }
+
+    h3 {
+        padding-top: 120px;
+        font-size: 40px;
+        text-align: center;
+    }
+
+    article {
+        
+        max-width: 100%;
+        padding-top: 0px;
+        margin: 80px 10px 0px 10px;
+
+    }
+
+}
